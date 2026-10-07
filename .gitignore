@@ -1,0 +1,45 @@
+# Python / okruženje
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# TensorFlow checkpoints (preveliki za GitHub)
+**/checkpoints*/
+**/checkpoints_*/
+**/*.ckpt*
+**/summary/
+**/events.out.tfevents.*
+
+# Skupovi podataka (preveliki; ne uploadati cijele mape)
+ImageAlignment/training/
+ImageAlignment/testing/
+ImageAlignment/testing2/
+# Allow dataset documentation in repo (no bulk images)
+!datasets/
+!datasets/**
+!examples/
+!examples/**
+ImageAlignment/output/
+ImageReconstruction/vgg19/vgg19.npy
+
+# Rezultati inferencije (opcionalno: ostavi 2–3 slike u examples/)
+ImageReconstruction/results/
+ImageReconstruction/results2/
+
+# Privremeni eval izlazi
+**/evaluation_results*.txt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Lokalne upute koje nisu potrebne na GitHubu (po želji ukloni iz ignore)
+# ENV_SETUP.md
+# CONDA_*.md
+# VENV_UPUTE.md

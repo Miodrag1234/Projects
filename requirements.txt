@@ -1,0 +1,9 @@
+# UDIS – ovisnosti (Python 3.6)
+# Koristi unutar conda env: pip install -r requirements.txt
+
+numpy==1.18.1
+tensorflow==1.13.1
+tensorlayer==1.8.0
+opencv-python
+scikit-image
+Pillow
