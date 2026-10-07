@@ -1,0 +1,107 @@
+data:
+    name: image_pairs
+    root: cropped_output
+    pairs: cropped_output/pairs_train.txt
+    extra_data: homography
+    preprocessing:
+        resize: 1024
+        side: long
+        square_pad: True
+    batch_size: 16
+    num_workers: 4
+data_val:
+    name: image_pairs
+    root: cropped_output
+    pairs: cropped_output/pairs_val.txt
+    extra_data: homography
+    preprocessing:
+        resize: 1024
+        side: long
+        square_pad: True
+    batch_size: 16
+    num_workers: 4
+model:
+    name: two_view_pipeline
+    extractor:
+        name: extractors.sift
+        backend: opencv
+        max_num_keypoints: 2048
+        force_num_keypoints: True
+        nms_radius: 3
+        trainable: False
+    descriptor_refiner:
+        name: utils.descriptor_refiner
+        descriptor_dim: 128
+        hidden_dim_mult: 2
+        normalize_input: True
+        normalize_output: True
+        trainable: True
+    ground_truth:
+        name: matchers.homography_matcher
+        th_positive: 3
+        th_negative: 3
+    matcher:
+        name: matchers.lightglue
+        filter_threshold: 0.1
+        flash: false
+        checkpointed: true
+        add_scale_ori: true
+        input_dim: 128
+        weights: sift
+train:
+    seed: 0
+    epochs: 20
+    log_every_iter: 20
+    eval_every_iter: 100
+    lr: 2.0e-05
+    lr_schedule:
+        start: 10
+        type: exp
+        on_epoch: true
+        exp_div_10: 5
+    plot: [5, 'gluefactory.visualization.visualize_batch.make_match_figures']
+benchmarks:
+    megadepth1500:
+        data:
+            preprocessing:
+                side: long
+                resize: 1600
+        model:
+            extractor:
+                nms_radius: 0
+            descriptor_refiner:
+                name: utils.descriptor_refiner
+                descriptor_dim: 128
+                hidden_dim_mult: 2
+                normalize_input: True
+                normalize_output: True
+        eval:
+            estimator: opencv
+            ransac_th: 0.5
+    hpatches:
+        eval:
+            estimator: opencv
+            ransac_th: 0.5
+        model:
+            extractor:
+                max_num_keypoints: 1024
+                nms_radius: 0
+            descriptor_refiner:
+                name: utils.descriptor_refiner
+                descriptor_dim: 128
+                hidden_dim_mult: 2
+                normalize_input: True
+                normalize_output: True
+    scannet1500:
+        eval:
+            estimator: opencv
+            ransac_th: 1.0
+        model:
+            extractor:
+                nms_radius: 0
+            descriptor_refiner:
+                name: utils.descriptor_refiner
+                descriptor_dim: 128
+                hidden_dim_mult: 2
+                normalize_input: True
+                normalize_output: True
