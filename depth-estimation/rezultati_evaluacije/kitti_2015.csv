@@ -1,0 +1,7 @@
+rang;model;ekstraktor;epe_px;d1_pct;vrijeme_s
+1;SI-MN3;MobileNetV3 Large;0.3030;1.4;0.239
+2;SI-R50;ResNet50;0.3359;1.5;0.255
+3;SI-DN121;DenseNet121;0.3409;1.6;0.259
+4;SI-EffB0;EfficientNet-B0;0.3611;1.7;0.239
+5;SI-MN4;MobileNetV4 Small;0.3613;1.8;0.232
+6;SI-EffL0;EfficientNet-Lite0;0.5126;1.9;0.237

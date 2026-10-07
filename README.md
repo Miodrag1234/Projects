@@ -12,7 +12,7 @@ One repository for MSc / CV work: **panorama stitching**, **homography estimatio
 |--------|--------|--------|------------|
 | [**panorama-stitching/**](panorama-stitching/) | Deep panoramic stitching (UDIS, Net4, FERIT-Panorama26) | **Done** — code, metrics, sample panorama | [README](panorama-stitching/README.md) · [results](panorama-stitching/docs/RESULTS.md) |
 | [**homography-estimation/**](homography-estimation/) | SIFT / SuperPoint + LightGlue, FERIT-HOMOGRAPHY, benchmarks | **Done** — scripts, eval, docs | [README](homography-estimation/README.md) · [experiments](homography-estimation/docs/EXPERIMENT_SUMMARY.md) |
-| [**depth-estimation/**](depth-estimation/) | Stereo / monocular depth | **Planned / in progress** | [README](depth-estimation/README.md) |
+| [**depth-estimation/**](depth-estimation/) | Stereo depth (Selective-IGEV backbones, KITTI, Ferit-Depth26) | **Done** — scripts, EPE/D1 tables | [README](depth-estimation/README.md) · [results](depth-estimation/rezultati_evaluacije/) |
 
 ---
 
@@ -20,7 +20,7 @@ One repository for MSc / CV work: **panorama stitching**, **homography estimatio
 
 - **Panorama:** end-to-end TF 1.x pipeline, custom Net4 architecture experiments, PSNR/SSIM + multi-resolution robustness, custom Mapillary dataset (documented).
 - **Homography:** Glue Factory extensions — custom dataset tooling, homography eval, descriptor refiner, HPatches / MegaDepth / ScanNet mAA tables, match & homography visualizations.
-- **Depth:** add your code here as you finish thesis chapters — same repo, clear separation.
+- **Depth:** Selective-IGEV with swappable CNN extractors; KITTI 2015 best EPE 0.303 / D1 1.4% (MobileNetV3); Ferit-Depth26 comparison vs MobileNetV2 baseline.
 
 ---
 
@@ -37,7 +37,7 @@ Projects/                          ← this repo (root)
 ├── README.md                      ← you are here
 ├── panorama-stitching/
 ├── homography-estimation/         ← Glue Factory extensions (this project)
-└── depth-estimation/
+└── depth-estimation/           ← Selective-IGEV adapters, eval, results
 ```
 
 ---

@@ -1,0 +1,8 @@
+model;ekstraktor;kitti2015_epe;kitti2015_d1;kitti2015_vrijeme_s;kitti2015_rang;ferit_epe;ferit_d1;ferit_rang
+SI-MN3;MobileNetV3 Large;0.3030;1.4;0.239;1;3.8100;6.98;5
+SI-R50;ResNet50;0.3359;1.5;0.255;2;2.2838;7.67;1
+SI-DN121;DenseNet121;0.3409;1.6;0.259;3;2.8281;7.26;3
+SI-EffB0;EfficientNet-B0;0.3611;1.7;0.239;4;5.5734;13.80;7
+SI-MN4;MobileNetV4 Small;0.3613;1.8;0.232;5;2.4971;7.69;2
+SI-EffL0;EfficientNet-Lite0;0.5126;1.9;0.237;6;3.7299;7.48;4
+SI-MN2;MobileNetV2 (baseline);;;;;;4.0142;13.08;6
