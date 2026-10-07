@@ -1,35 +1,36 @@
-# Python / okruženje
+# Python / environment
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
 .pytest_cache/
+.env
+.envrc
 
-# TensorFlow checkpoints (preveliki za GitHub)
+# TensorFlow checkpoints (too large for GitHub)
 **/checkpoints*/
 **/checkpoints_*/
 **/*.ckpt*
 **/summary/
 **/events.out.tfevents.*
 
-# Skupovi podataka (preveliki; ne uploadati cijele mape)
+# Datasets (local only — docs/samples stay in repo)
 ImageAlignment/training/
 ImageAlignment/testing/
 ImageAlignment/testing2/
-# Allow dataset documentation in repo (no bulk images)
+ImageAlignment/output/
 !datasets/
 !datasets/**
 !examples/
 !examples/**
-ImageAlignment/output/
 ImageReconstruction/vgg19/vgg19.npy
 
-# Rezultati inferencije (opcionalno: ostavi 2–3 slike u examples/)
+# Inference outputs (keep only examples/stitched/)
 ImageReconstruction/results/
 ImageReconstruction/results2/
 
-# Privremeni eval izlazi
+# Eval temp files
 **/evaluation_results*.txt
 
 # OS / IDE
@@ -38,8 +39,3 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
-
-# Lokalne upute koje nisu potrebne na GitHubu (po želji ukloni iz ignore)
-# ENV_SETUP.md
-# CONDA_*.md
-# VENV_UPUTE.md

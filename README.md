@@ -1,5 +1,7 @@
 # Deep Image Stitching — UDIS Extension & Panorama Pipeline
 
+Computer vision project: homography estimation, panoramic image stitching, and deep learning evaluation (UDIS-based pipeline).
+
 Portfolio repository for an **MSc / research project**: unsupervised panorama stitching built on [UDIS](https://github.com/nie-lang/UnsupervisedDeepImageStitching) (Nie et al., IEEE TIP 2021), with **custom Net4 experiments**, **robustness evaluation**, custom dataset **FERIT-Panorama26**, and Stage 2 model **UDIS-V1**.
 
 > **For recruiters:** everything below is viewable **without downloading datasets or weights** — sample images, metrics, and code entry points are in this repo.
