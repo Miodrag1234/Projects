@@ -5,7 +5,7 @@
 In PowerShell, from the project folder:
 
 ```powershell
-cd c:\udis--d-kod\UnsupervisedDeepImageStitching-main
+cd path\to\Projects
 powershell -ExecutionPolicy Bypass -File scripts\push-to-github.ps1
 ```
 
@@ -31,7 +31,7 @@ gh auth login
 Then from the project folder:
 
 ```powershell
-cd c:\udis--d-kod\UnsupervisedDeepImageStitching-main
+cd path\to\Projects
 git init -b main
 git add -A
 git commit -m "Initial portfolio commit"
@@ -48,7 +48,7 @@ Change `deep-image-stitching-portfolio` and `--public` to `--private` if you pre
 2. In PowerShell:
 
 ```powershell
-cd c:\udis--d-kod\UnsupervisedDeepImageStitching-main
+cd path\to\Projects
 git init -b main
 git add -A
 git status
@@ -64,7 +64,7 @@ git push -u origin main
 Whenever you change files:
 
 ```powershell
-cd c:\udis--d-kod\UnsupervisedDeepImageStitching-main
+cd path\to\Projects
 git add -A
 git commit -m "Update results / examples"
 git push

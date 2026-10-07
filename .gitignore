@@ -1,4 +1,4 @@
-# Python / environment
+# Python / environment (all projects)
 .venv/
 venv/
 __pycache__/
@@ -8,29 +8,32 @@ __pycache__/
 .env
 .envrc
 
-# TensorFlow checkpoints (too large for GitHub)
+# Checkpoints (all projects)
 **/checkpoints*/
 **/checkpoints_*/
 **/*.ckpt*
 **/summary/
 **/events.out.tfevents.*
 
-# Datasets (local only — docs/samples stay in repo)
-ImageAlignment/training/
-ImageAlignment/testing/
-ImageAlignment/testing2/
-ImageAlignment/output/
-!datasets/
-!datasets/**
-!examples/
-!examples/**
-ImageReconstruction/vgg19/vgg19.npy
+# Panorama — local data (keep docs/samples in repo)
+panorama-stitching/ImageAlignment/training/
+panorama-stitching/ImageAlignment/testing/
+panorama-stitching/ImageAlignment/testing2/
+panorama-stitching/ImageAlignment/output/
+panorama-stitching/ImageReconstruction/vgg19/vgg19.npy
+panorama-stitching/ImageReconstruction/results/
+panorama-stitching/ImageReconstruction/results2/
+!panorama-stitching/datasets/
+!panorama-stitching/datasets/**
+!panorama-stitching/examples/
+!panorama-stitching/examples/**
 
-# Inference outputs (keep only examples/stitched/)
-ImageReconstruction/results/
-ImageReconstruction/results2/
+# Homography / depth — add when you have local data folders
+homography-estimation/data/
+homography-estimation/checkpoints/
+depth-estimation/data/
+depth-estimation/checkpoints/
 
-# Eval temp files
 **/evaluation_results*.txt
 
 # OS / IDE

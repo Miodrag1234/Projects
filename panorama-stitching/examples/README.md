@@ -30,4 +30,4 @@ Copy-Item path\to\left.jpg  examples\input\pair_01_a.jpg
 Copy-Item path\to\right.jpg examples\input\pair_01_b.jpg
 ```
 
-These paths are referenced from the root [README.md](../README.md).
+These paths are referenced from [panorama-stitching/README.md](../README.md) and the [portfolio root](../../README.md).

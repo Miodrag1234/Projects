@@ -2,7 +2,8 @@
 # Run from repo root:  powershell -ExecutionPolicy Bypass -File scripts\push-to-github.ps1
 
 $ErrorActionPreference = "Stop"
-$Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
+# Repo root = two levels up from panorama-stitching/scripts/
+$Root = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path))
 Set-Location $Root
 
 Write-Host "Project root: $Root" -ForegroundColor Cyan
