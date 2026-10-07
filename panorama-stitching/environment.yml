@@ -1,0 +1,17 @@
+# Conda okruženje za UDIS (Image Alignment + Image Reconstruction)
+# OpenCV se instalira iz conda-forge (predgrađeno, bez Visual Studio).
+
+name: udis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6
+  - pip
+  - opencv
+  - numpy=1.18.1
+  - pip:
+    - tensorflow==1.13.1
+    - tensorlayer==1.8.0
+    - scikit-image
+    - Pillow

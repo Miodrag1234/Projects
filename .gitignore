@@ -1,8 +1,45 @@
-﻿.DS_Store
-Thumbs.db
-*.pyc
-__pycache__/
+# Python / environment (all projects)
 .venv/
 venv/
-data/
-outputs/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.env
+.envrc
+
+# Checkpoints (all projects)
+**/checkpoints*/
+**/checkpoints_*/
+**/*.ckpt*
+**/summary/
+**/events.out.tfevents.*
+
+# Panorama — local data (keep docs/samples in repo)
+panorama-stitching/ImageAlignment/training/
+panorama-stitching/ImageAlignment/testing/
+panorama-stitching/ImageAlignment/testing2/
+panorama-stitching/ImageAlignment/output/
+panorama-stitching/ImageReconstruction/vgg19/vgg19.npy
+panorama-stitching/ImageReconstruction/results/
+panorama-stitching/ImageReconstruction/results2/
+!panorama-stitching/datasets/
+!panorama-stitching/datasets/**
+!panorama-stitching/examples/
+!panorama-stitching/examples/**
+
+# Homography / depth — local data
+homography-estimation/data/
+homography-estimation/outputs/
+homography-estimation/checkpoints/
+depth-estimation/data/
+depth-estimation/checkpoints/
+
+**/evaluation_results*.txt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

@@ -1,8 +1,10 @@
 # Sparse Image Matching & Homography Estimation (SIFT / SuperPoint + LightGlue)
 
+[← Back to portfolio root](../README.md)
+
 Extension of **[Glue Factory](https://github.com/cvg/glue-factory)** (Apache-2.0) for **homography estimation**: custom **FERIT-HOMOGRAPHY** dataset tooling, evaluation, training configs, and visualization. Public benchmarks: **HPatches**, **MegaDepth-1500**, **ScanNet-1500**.
 
-This repository is a **fork with my additions** (not a from-scratch framework). Upstream code remains attributed to CVG / Glue Factory authors.
+Install [Glue Factory](https://github.com/cvg/glue-factory) locally, then copy or merge the `gluefactory/` files from this folder into that tree (or use a fork).
 
 ---
 
@@ -55,33 +57,26 @@ Model IDs and training setup: [`docs/EXPERIMENT_SUMMARY.md`](docs/EXPERIMENT_SUM
 - **`gluefactory/scripts/visualize_hpatches_matches.py`** — export PNGs: SIFT vs SuperPoint, GT homography coloring
 - **`gluefactory/models/utils/descriptor_refiner.py`** — lightweight descriptor refinement before LightGlue (~66k params, identity init)
 - **Configs** — `sift+lightglue_cropped_homography.yaml`, `sift+lightglue_refiner_cropped_homography.yaml`
-- **Stability** — SIFT / homography dtype fixes, Windows-friendly training (`opencv` backend, `num_workers=0`)
 
 ---
 
 ## Quick start
 
-Install (same as upstream):
-
 ```bash
 conda create -n glue_factory python=3.10
 conda activate glue_factory
-pip install -e .
+# clone cvg/glue-factory, pip install -e ., then merge this folder's gluefactory/* paths
 ```
 
-Full upstream instructions: [Glue Factory README](https://github.com/cvg/glue-factory/blob/main/README.md).
+**Windows:** `model.extractor.backend=opencv`, `data.num_workers=0`.
 
-**Windows:** use `model.extractor.backend=opencv` and `data.num_workers=0` for SIFT training/eval.
-
-### Visual demo (HPatches — download dataset locally or use existing `data/hpatches-sequences-release/`)
+### Visual demo (HPatches)
 
 ```bash
 python -m gluefactory.scripts.visualize_hpatches_matches --sequence v_graffiti --query 5
 ```
 
-Outputs go to `outputs/visualizations/hpatches/` (gitignored). Copy PNGs to `docs/examples/` for GitHub.
-
-### FERIT-HOMOGRAPHY (you provide data — see dataset README)
+### FERIT-HOMOGRAPHY (local data — see dataset README)
 
 ```bash
 python -m gluefactory.scripts.generate_cropped_pairs --root data/cropped_output
@@ -102,33 +97,18 @@ python -m gluefactory.eval.ferit_homography \
 | `generate_cropped_pairs.py` | Create pair list files from scene + patch folders |
 | `visualize_hpatches_matches.py` | Side-by-side match & homography figures |
 | `eval/ferit_homography.py` | mAA, RANSAC/DLT homography error on FERIT-style pairs |
-| `eval/hpatches.py` | Standard HPatches eval (upstream + your checkpoints) |
-
-Interactive inspection after eval (upstream):  
-`python -m gluefactory.eval.inspect hpatches <tag1> <tag2> --default_plot homography`
 
 ---
 
-## What is **not** in this GitHub repo
+## Relation to panorama project
 
-| Item | Why |
-|------|-----|
-| `data/` (FERIT images, MegaDepth, …) | Size & licensing — **dataset described in docs only** |
-| Training checkpoints | Multi-GB; mention run names in CV |
-| Full thesis PDF | University copyright — **English summary in `docs/EXPERIMENT_SUMMARY.md`** |
+[`panorama-stitching/`](../panorama-stitching/) uses **deep homography** (UDIS) for alignment. This folder covers **sparse matching + LightGlue + classical RANSAC** and custom FERIT benchmarks — complementary, not a duplicate of UDIS checkpoints.
 
 ---
 
 ## License & attribution
 
-- **Glue Factory** — [Apache License 2.0](LICENSE); see [cvg/glue-factory](https://github.com/cvg/glue-factory).
-- **LightGlue / SuperPoint** — follow upstream licenses.
-- **My additions** (scripts, eval, dataset docs, configs listed above) — Apache-2.0, same as the base project, with upstream copyright notices retained.
-
----
-
-## Contact
-
-*[Your Name]* · *[email]* · *[LinkedIn]*
+- **Glue Factory** — [Apache License 2.0](LICENSE); [cvg/glue-factory](https://github.com/cvg/glue-factory).
+- **My additions** in this folder — same license, with upstream copyright notices retained.
 
 **CV one-liner:** *Extended Glue Factory for homography estimation: FERIT-HOMOGRAPHY pipeline, custom eval, SIFT+LightGlue benchmarks (HPatches / MegaDepth / ScanNet), visualization tooling — PyTorch, OpenCV.*
