@@ -12,7 +12,7 @@ Install [Glue Factory](https://github.com/cvg/glue-factory) locally, then copy o
 
 | Asset | Location |
 |-------|----------|
-| **Match & homography figures** | [`docs/examples/`](docs/examples/) (PNG, when added) |
+
 | **FERIT dataset docs + example pair** | [`docs/datasets/FERIT-HOMOGRAPHY/README.md`](docs/datasets/FERIT-HOMOGRAPHY/README.md) |
 | **Experiment summary (English)** | [`docs/EXPERIMENT_SUMMARY.md`](docs/EXPERIMENT_SUMMARY.md) |
 | **Runnable scripts** | `gluefactory/scripts/`, `gluefactory/eval/ferit_homography.py` |
