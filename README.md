@@ -89,4 +89,4 @@ Python · TensorFlow 1.x / PyTorch (per project) · OpenCV · NumPy · Computer 
 
 ## Contact
 
-**Miodrag** · *[your email]* · *[LinkedIn]*
+**Miodrag** · *[mijomarkovic2611@gmail.com]* 
