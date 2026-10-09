@@ -32,20 +32,20 @@ python train_stereo.py --train_datasets synthetic_train --synt_root "datasets/sy
 
 If disparity sign/order is wrong (very high EPE), try `--synt_disp_sign -1` and/or `--synt_swap_lr`.
 
-## Sample pair (`scene01`, frame 010)
+## Sample pair (`scene01`, frame 038)
 
-| Left | Right |
-|---|---|
-| ![left](scene01/left/left_010.png) | ![right](scene01/right/right_010.png) |
+| Left | Right | Disparity GT (preview) |
+|---|---|---|
+| ![left](scene01/left/left_038.png) | ![right](scene01/right/right_038.png) | ![disp](scene01/dispgt/disp_038_preview.png) |
 
 ```text
 examples/ferit-depth26/scene01/
-  left/left_010.png
-  right/right_010.png
-  dispgt/disp_010.pfm
+  left/left_038.png
+  right/right_038.png
+  dispgt/disp_038_preview.png
 ```
 
-One pair only — not the full training set. GT is PFM (GitHub will not preview it as an image).
+One pair only — not the full training set. The PNG is a colorized disparity preview (near = red/yellow, far = blue).
 
 ## Depth from disparity
 

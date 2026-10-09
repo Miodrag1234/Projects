@@ -6,11 +6,11 @@ Stereo matching on **[Selective-IGEV](https://github.com/Windsrain/Selective-Ste
 
 Clone the original Selective-IGEV tree, then drop these files into it (or merge paths). Full datasets and `.pth` weights are **not** in this repo.
 
-Sample from **Ferit-Depth26** (one pair):
+Sample from **Ferit-Depth26** (frame 038):
 
-| Left | Right |
-|---|---|
-| ![left](examples/ferit-depth26/scene01/left/left_010.png) | ![right](examples/ferit-depth26/scene01/right/right_010.png) |
+| Left | Right | Disparity GT |
+|---|---|---|
+| ![left](examples/ferit-depth26/scene01/left/left_038.png) | ![right](examples/ferit-depth26/scene01/right/right_038.png) | ![disp](examples/ferit-depth26/scene01/dispgt/disp_038_preview.png) |
 
 ---
 
