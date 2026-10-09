@@ -33,7 +33,7 @@ Details: [`docs/datasets/FERIT-HOMOGRAPHY/README.md`](docs/datasets/FERIT-HOMOGR
 
 ---
 
-## At a glance (for recruiters)
+## At a glance 
 
 | | |
 |---|---|
