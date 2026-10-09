@@ -20,7 +20,7 @@ Install [Glue Factory](https://github.com/cvg/glue-factory) locally, then copy o
 
 
 
-![Example: homography inliers & GT warp](docs/examples/hpatches_homography.png)
+
 
 ### FERIT-HOMOGRAPHY — example scene (view 0 + patch)
 
