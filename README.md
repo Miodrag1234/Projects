@@ -17,7 +17,7 @@ One repository for MSc / CV work: **panorama stitching**, **homography estimatio
 
 ---
 
-## Highlights for recruiters
+## Highlights
 
 - **Panorama:** end-to-end TF 1.x pipeline, custom Net4 architecture experiments, PSNR/SSIM + multi-resolution robustness, custom Mapillary dataset (documented).
 - **Homography:** Glue Factory extensions — custom dataset tooling, homography eval, descriptor refiner, HPatches / MegaDepth / ScanNet mAA tables, match & homography visualizations.
