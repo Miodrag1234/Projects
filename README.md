@@ -29,6 +29,14 @@ One repository for MSc / CV work: **panorama stitching**, **homography estimatio
 
 ![Panorama example](panorama-stitching/examples/stitched/panorama_000030.jpg)
 
+## Sample output (homography — FERIT example pair)
+
+| Scene (patch region marked) | Cropped patch |
+|-----------------------------|---------------|
+| ![FERIT scene](homography-estimation/docs/datasets/FERIT-HOMOGRAPHY/scene1_final_annotated.png) | ![FERIT patch](homography-estimation/docs/datasets/FERIT-HOMOGRAPHY/scene1_patch_01.png) |
+
+More: [homography-estimation/docs/datasets/FERIT-HOMOGRAPHY/](homography-estimation/docs/datasets/FERIT-HOMOGRAPHY/README.md)
+
 ---
 
 ## Repository layout

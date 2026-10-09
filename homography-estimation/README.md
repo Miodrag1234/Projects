@@ -12,8 +12,8 @@ Install [Glue Factory](https://github.com/cvg/glue-factory) locally, then copy o
 
 | Asset | Location |
 |-------|----------|
-| **Match & homography figures** | [`docs/examples/`](docs/examples/) (PNG) |
-| **Dataset format (no images shipped)** | [`docs/datasets/FERIT-HOMOGRAPHY/README.md`](docs/datasets/FERIT-HOMOGRAPHY/README.md) |
+| **Match & homography figures** | [`docs/examples/`](docs/examples/) (PNG, when added) |
+| **FERIT dataset docs + example pair** | [`docs/datasets/FERIT-HOMOGRAPHY/README.md`](docs/datasets/FERIT-HOMOGRAPHY/README.md) |
 | **Experiment summary (English)** | [`docs/EXPERIMENT_SUMMARY.md`](docs/EXPERIMENT_SUMMARY.md) |
 | **Runnable scripts** | `gluefactory/scripts/`, `gluefactory/eval/ferit_homography.py` |
 | **Training / eval configs** | `gluefactory/configs/sift+lightglue_*cropped*.yaml` |
@@ -22,6 +22,16 @@ Install [Glue Factory](https://github.com/cvg/glue-factory) locally, then copy o
 *Add this file locally — see [`docs/examples/README.md`](docs/examples/README.md).*
 
 ![Example: homography inliers & GT warp](docs/examples/hpatches_homography.png)
+
+### FERIT-HOMOGRAPHY — example scene (view 0 + patch)
+
+Scene with annotated region **`patch_01`** and the corresponding crop (full dataset not on GitHub):
+
+| Scene + quadrilateral | Patch (view 1) |
+|-----------------------|----------------|
+| ![FERIT scene example](docs/datasets/FERIT-HOMOGRAPHY/scene1_final_annotated.png) | ![FERIT patch example](docs/datasets/FERIT-HOMOGRAPHY/scene1_patch_01.png) |
+
+Details: [`docs/datasets/FERIT-HOMOGRAPHY/README.md`](docs/datasets/FERIT-HOMOGRAPHY/README.md).
 
 ---
 

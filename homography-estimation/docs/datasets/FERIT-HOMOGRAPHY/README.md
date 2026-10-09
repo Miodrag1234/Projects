@@ -1,7 +1,7 @@
-# FERIT-HOMOGRAPHY (documentation only)
+# FERIT-HOMOGRAPHY (documentation + one example pair)
 
 Custom homography dataset for **full scene ↔ local patch** matching.  
-**Images are not included in this GitHub repository** (size and usage rights). This README describes the format so reviewers can understand the pipeline without access to the raw data.
+The **full dataset is not hosted on GitHub** (size and usage rights). This folder documents the format and includes **one illustrative scene** so reviewers can see how pairs are defined.
 
 ---
 
@@ -9,11 +9,28 @@ Custom homography dataset for **full scene ↔ local patch** matching.
 
 Each sample is an image pair:
 
-- **View 0** — full scene (`original.jpg`)
+- **View 0** — full scene (`original.jpg` or equivalent)
 - **View 1** — cropped patch from the same scene
 - **Ground truth** — planar homography **H** mapping coordinates from view 0 to view 1 (scene → crop)
 
 Used for fine-tuning and evaluating **SIFT + LightGlue** with Glue Factory’s `image_pairs` dataset and `homography_matcher` supervision.
+
+---
+
+## Example pair (included in this repo)
+
+**Scene 1 — desk / magazine layout.** The patch region is marked on the scene image; the patch file is the warped crop used as view 1.
+
+| Role | File | Description |
+|------|------|-------------|
+| View 0 (scene + annotation) | [`scene1_final_annotated.png`](scene1_final_annotated.png) | Full scene; quadrilateral **`patch_01`** with corners **1–4** defines the region |
+| View 1 (patch) | [`scene1_patch_01.png`](scene1_patch_01.png) | Cropped patch aligned to that quadrilateral |
+
+![Scene with patch_01 region marked](scene1_final_annotated.png)
+
+![Extracted patch_01](scene1_patch_01.png)
+
+In the full dataset, each scene folder also stores `*_H_scene_to_crop.txt` (3×3 **H**) and JSON metadata; see layout below.
 
 ---
 
@@ -55,13 +72,13 @@ Glue Factory `image_pairs` format with `extra_data: homography`:
 <image0> <image1> H11 H12 H13 H21 H22 H23 H31 H32 H33
 ```
 
-Concrete example (illustrative paths):
+Illustrative paths for scene 1 (homography values come from your local `H_scene_to_crop.txt`):
 
 ```
-scene042/original.jpg scene042/scene042_patch_03.png 0.412 0.003 -128.5 -0.001 0.398 96.2 0.0000012 0.000004 1.0
+scene1/original.jpg scene1/scene1_patch_01.png ...
 ```
 
-See also: [`example_pair_line.txt`](example_pair_line.txt) in this folder.
+See also: [`example_pair_line.txt`](example_pair_line.txt).
 
 ---
 
@@ -90,19 +107,6 @@ Preprocessing (eval): resize long side 1024, `square_pad: true`, OpenCV homograp
 
 ---
 
-## Example figures (optional in repo)
-
-If you are allowed to publish **one anonymized scene**, add placeholders here:
-
-| File | Description |
-|------|-------------|
-| `docs/examples/ferit_pair.jpg` | Mosaic or side-by-side scene + patch (no sensitive content) |
-| `docs/examples/ferit_matches.png` | Matches overlay (generated locally) |
-
-Otherwise, HPatches examples in [`docs/examples/`](../../examples/) demonstrate the same pipeline on public data.
-
----
-
 ## Citation / usage
 
-Dataset collected for academic work at FERIT. Do not redistribute images without permission. Code in this repo for handling the format is under the same **Apache-2.0** license as Glue Factory.
+Dataset collected for academic work at FERIT. Do not redistribute the full image collection without permission. The single example pair here is for portfolio / thesis illustration. Code in this repo for handling the format is under the same **Apache-2.0** license as Glue Factory.
