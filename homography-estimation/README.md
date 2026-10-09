@@ -18,8 +18,7 @@ Install [Glue Factory](https://github.com/cvg/glue-factory) locally, then copy o
 | **Runnable scripts** | `gluefactory/scripts/`, `gluefactory/eval/ferit_homography.py` |
 | **Training / eval configs** | `gluefactory/configs/sift+lightglue_*cropped*.yaml` |
 
-![Example: SIFT vs SuperPoint matches](docs/examples/hpatches_matches.png)
-*Add this file locally — see [`docs/examples/README.md`](docs/examples/README.md).*
+
 
 ![Example: homography inliers & GT warp](docs/examples/hpatches_homography.png)
 
