@@ -6,6 +6,12 @@ Stereo matching on **[Selective-IGEV](https://github.com/Windsrain/Selective-Ste
 
 Clone the original Selective-IGEV tree, then drop these files into it (or merge paths). Full datasets and `.pth` weights are **not** in this repo.
 
+Sample from **Ferit-Depth26** (one pair):
+
+| Left | Right |
+|---|---|
+| ![left](examples/ferit-depth26/scene01/left/left_010.png) | ![right](examples/ferit-depth26/scene01/right/right_010.png) |
+
 ---
 
 ## What you can see without downloading data
@@ -13,7 +19,7 @@ Clone the original Selective-IGEV tree, then drop these files into it (or merge 
 | Asset | Location |
 |-------|----------|
 | **KITTI / Ferit-Depth26 tables** | [`rezultati_evaluacije/`](rezultati_evaluacije/) |
-| **Dataset layout (no full set)** | [`examples/ferit-depth26/`](examples/ferit-depth26/) |
+| **Sample stereo pair + layout** | [`examples/ferit-depth26/`](examples/ferit-depth26/) |
 | **Backbone adapters** | [`core/extractor.py`](core/extractor.py) |
 | **Train / eval** | [`train_stereo.py`](train_stereo.py), [`evaluate_stereo.py`](evaluate_stereo.py) |
 
