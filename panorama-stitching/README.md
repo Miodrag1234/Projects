@@ -13,9 +13,15 @@ Deep learning pipeline for **panoramic image stitching**, based on [UDIS](https:
 | **Stitched panorama** | [`examples/stitched/panorama_000030.jpg`](examples/stitched/panorama_000030.jpg) |
 | **Results (PSNR / SSIM)** | [docs/RESULTS.md](docs/RESULTS.md) |
 | **My contributions** | [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md) |
-| **Dataset (docs only)** | [datasets/FERIT-Panorama26/](datasets/FERIT-Panorama26/) |
+| **Dataset docs + sample frames** | [datasets/FERIT-Panorama26/](datasets/FERIT-Panorama26/) · [samples/](datasets/FERIT-Panorama26/samples/) |
 
 ![Example panorama](examples/stitched/panorama_000030.jpg)
+
+**FERIT-Panorama26 sample pair (Mapillary, consecutive frames):**
+
+| Frame A | Frame B |
+|---------|---------|
+| ![0104](datasets/FERIT-Panorama26/samples/image_0104.jpg) | ![0105](datasets/FERIT-Panorama26/samples/image_0105.jpg) |
 
 ---
 

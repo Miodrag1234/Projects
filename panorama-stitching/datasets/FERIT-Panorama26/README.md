@@ -51,16 +51,19 @@ The data loader pairs consecutive images: `(image_i, image_{i+1})` after sorting
 
 ## Sample files in this repo
 
-Add 1–2 representative pairs under [`samples/`](samples/):
+Five consecutive frames are included under [`samples/`](samples/) (not the full 999-image sequence):
 
-```
-samples/
-├── pair_01_left.jpg
-├── pair_01_right.jpg
-└── README.md
-```
+| File |
+|------|
+| `image_0103.jpg` … `image_0107.jpg` |
 
-*(Copy from your local `testing2/` — do not commit the full folder.)*
+See [samples/README.md](samples/README.md) for pairing and preview images.
+
+**Example consecutive pair:**
+
+| `image_0104.jpg` | `image_0105.jpg` |
+|------------------|------------------|
+| ![sample left](samples/image_0104.jpg) | ![sample right](samples/image_0105.jpg) |
 
 ---
 
