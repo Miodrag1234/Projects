@@ -25,9 +25,19 @@ One repository for MSc / CV work: **panorama stitching**, **homography estimatio
 
 ---
 
-## Sample output (panorama)
+## Sample outputs
+
+**Stitched panorama (UDIS-V1, Stage 2):**
 
 ![Panorama example](panorama-stitching/examples/stitched/panorama_000030.jpg)
+
+**Input pair — FERIT-Panorama26 samples** ([Mapillary](https://www.mapillary.com/), consecutive frames):
+
+| Frame | Frame |
+|-------|-------|
+| ![FERIT 0104](panorama-stitching/datasets/FERIT-Panorama26/samples/image_0104.jpg) | ![FERIT 0105](panorama-stitching/datasets/FERIT-Panorama26/samples/image_0105.jpg) |
+
+More samples: [panorama-stitching/datasets/FERIT-Panorama26/samples/](panorama-stitching/datasets/FERIT-Panorama26/samples/)
 
 ---
 
